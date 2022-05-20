@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/kskjain1/sk/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kskjain1/sk/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<script src="https://partial-honest1.cs159.force.com/WebSchedulevforcesite/lightning/lightning.out.js"></script>
+ 
+    <div id="LightningAppDivId">
+        <!-- Lightning Web Component will be included here. -->
+    </div>
+    
+    <script>
+ 
+    $Lightning.use(
+        "c:schedulerApp", // Name of Aura Dependency app where c is namespace.
+        function (
+        ) { // Callback function
+            $Lightning.createComponent(
+                "c:showSlots", // Name of Lightning Component where c is namespace.
+                { authToken :"6Cel800D7X0000008smQ8887X0000006xLo68s8aWNuDCQGH3qCysjOoWECcMQX7ZkQcJXOvl4CoylSp8AlvqH9MQAz67Yk7fhAm76dkYPe",
+                    
+                    serviceAppointmentId:'08p7X000000ZUxcQAG'
+                }, // attribute parameters
+                "LightningAppDivId", // Id of the element where Lightning Component will be rendered.
+                function(cmp){
+                    document.querySelector('c-show-slots').addEventListener("scheduledRecord", function (event) {
+                        console.log('vf event data window listener => ', event.detail);
+                    });
+                }
+            );
+        },
+'https://partial-honest1.cs159.force.com/WebSchedulevforcesite/'
+    );
+    </script>  
